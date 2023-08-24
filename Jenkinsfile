@@ -5,11 +5,12 @@ pipeline{
     githubPush()
   }
 
-  stage{
-    stage{
+  stages{
+    stage('Checkout'){
+      steps{
       //checkout the respository
       checkout scm
+      }
     }
   }
-}
 }
